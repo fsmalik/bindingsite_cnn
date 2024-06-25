@@ -9,6 +9,8 @@ usage() {
     echo ".pdb files in the directory. Files should not end in"
     echo "*_binding_site.pdb or *_ligand.pdb - these exts are"
     echo "reserved for the output files."
+    echo ""
+    echo "The ligand ID is determined from https://www.rcsb.org"
 }
 
 if [ "$#" -eq 0 ]; then
@@ -26,8 +28,11 @@ if [ "$#" -eq 0 ]; then
 	# Running python script
 	for file in "${files[@]}"; do
 	    filename_no_extension=$(basename "$file" .pdb)
-	    command="python3 find_HETATM.py -i $file -b ${filename_no_extension}_binding_site.pdb -l ${filename_no_extension}_ligand.pdb"
+	    ligand=$(curl -s "https://www.rcsb.org/structure/$filename_no_extension" | sed -n 's/.*Ligand Interaction<\/a>&nbsp;\(([^)]*)\).*/\1/p' | sed 's/(//g; s/)//g')
+	    command="python3 find_HETATM_1.1.py -i $file -ht $ligand -b ${filename_no_extension}_binding_site.pdb -l ${filename_no_extension}_ligand.pdb"
+	    echo "batch command: " $command
 	    eval "$command"
+            echo ""
 	done
 	exit 0
 fi
