@@ -51,16 +51,14 @@ Example: include -c to center.
   
 * After running the program you will find a file for the binding site and a file for the ligand, both in ```.pdb``` format. The binding site contains the full residues that are within the given distance of any atom of the ligand. 3.5 Å is the default distance used. 
 
-![8e4l_binding_site_img](https://github.com/user-attachments/assets/de743252-4907-4842-81b6-0153a22d0cb1)
-![8e4l_ligand_img](https://github.com/user-attachments/assets/35a88f4a-b73c-4f52-b2a4-debdebd9420a)
-![8e4l_combo_img](https://github.com/user-attachments/assets/3936622a-ef3e-47d1-a1a0-97d89b39b4f0)
-
-<div style="display: flex; justify-content: space-around;">
-    <img src="(https://github.com/user-attachments/assets/de743252-4907-4842-81b6-0153a22d0cb1)" alt="Image 1" width="300" />
-    <img src="(https://github.com/user-attachments/assets/35a88f4a-b73c-4f52-b2a4-debdebd9420a)" alt="Image 2" width="300" />
-    <img src="(https://github.com/user-attachments/assets/3936622a-ef3e-47d1-a1a0-97d89b39b4f0)" alt="Image 3" width="300" />
+<h3>Binding Site of PIP<sub>2</sub> found in 8E4L</h3>
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://github.com/user-attachments/assets/7096d2a3-1e53-4846-b63b-35930661b355" alt="8e4l_ligand_img" width="300" />
+    <img src="https://github.com/user-attachments/assets/80a1fb2a-b2b7-4b44-8f66-6cb9f48ce555" alt="8e4l_binding_site_img" width="300" />
+    <img src="https://github.com/user-attachments/assets/05698efb-0c1f-4b92-bc8e-8b2a7944a0cd" alt="8e4l_combo_img" width="300" />
 </div>
 
+_8E4L is a crystal structure of TRPM8; PIP<sub>2</sub> binds to the interfacial cavity at the S4b, TRP domain, and pre-S1.[^1] This program provides insights of essential functions like this and can be used for bioinformatic analysis._
 
 ### 2. Isolating a ligand and its corresponding binding site of a more than one protein structure file
 
@@ -96,7 +94,7 @@ Ensure that you have the required permissions to execute the script. You may nee
    * This essentially looks at all the ```.pdb``` files in the current directory and combines ligand and binding site based on the original PDB. For instance, it will take ```7yxr_binding_site.pdb``` and ```7yxr_ligand.pdb``` and combine the two into a single file ```7yxr_combo.pdb```.
    * If the combined file already exists, it will be deleted before making a new version. So if ```7yxr_combo.pdb``` already exisits in the directory it will be deleted and replaced.
     
-4. ```TEMP_voxelizer+keras.py``` __is INCOMPLETE and has not been tested completely__ - Instead I suggest using [PyUUL](https://pyuul.readthedocs.io) for protein voxelization.
+4. ```TEMP_voxelizer+keras.py``` __is INCOMPLETE and has not been tested completely__ - Instead I suggest using [PyUUL](https://pyuul.readthedocs.io) for protein and small molecule voxelization.
    * Contains the python class for voxelization functions and reverse functions.
    * Contains scripts for training a 3D CNN on voxel.
    * Hashing protocol is inspired by the [TorchProteinLibray](https://github.com/lamoureux-lab/TorchProteinLibrary). __Note__: the hashing used here is reversed to align more towards drug development utilities.
@@ -105,3 +103,5 @@ Ensure that you have the required permissions to execute the script. You may nee
    * __Requirements:__
      * Tensor Flow: ```tensorflow```
      * Scikit-learn: ```sklearn```
+
+[^1]: Yin, Y., Zhang, F., Feng, S., Kevin John Butay, Borgnia, M. J., Im, W., & Lee, S.-Y. (2022). Activation mechanism of the mouse cold-sensing TRPM8 channel by cooling agonist and PIP 2. 378(6616). https://doi.org/10.1126/science.add1268
