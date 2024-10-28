@@ -3,7 +3,7 @@ Contains scripts for a working project that converts protein binding sites to te
 
 The Keras code is written in CPU form, but was meant to be converted to GPU since the calculations are intensive. I currently only have MacOS, and this is the reason the project is currently on hold.
 
-However, certain scripts in the program can still be used for other things.
+However, certain scripts in the program can still be used for other tasks.
 
 __Requirements:__
 
