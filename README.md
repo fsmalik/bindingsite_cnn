@@ -60,7 +60,7 @@ Example: include -c to center.
 
 _8E4L is a crystal structure of TRPM8; PIP<sub>2</sub> binds to the interfacial cavity at the S4b, TRP domain, and pre-S1.[^1] This program provides insights of essential functions like this and can be used for bioinformatic analysis._
 
-### 2. Isolating a ligand and its corresponding binding site of a more than one protein structure file
+### 2. Isolating a ligand and its corresponding binding site of multiple protein structure files
 
 ```markdown
 bash hetatm_batch_script_2.0.sh [options]
