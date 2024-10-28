@@ -52,20 +52,6 @@ Example: include -c to center.
 * After running the program you will find a file for the binding site and a file for the ligand, both in ```.pdb``` format. The binding site contains the full residues that are within the given distance of any atom of the ligand. 3.5 Å is the default distance used. 
 
 <h3>Binding Site of PIP<sub>2</sub> found in 8E4L</h3>
-<div style="text-align: center;">
-    <!-- Row for the first two images side-by-side -->
-    <div style="display: inline-block;">
-        <img src="https://github.com/user-attachments/assets/7096d2a3-1e53-4846-b63b-35930661b355" alt="8e4l_ligand_img" width="300" />
-        <img src="https://github.com/user-attachments/assets/80a1fb2a-b2b7-4b44-8f66-6cb9f48ce555" alt="8e4l_binding_site_img" width="300" />
-    </div>
-    <!-- Row for the third image centered below -->
-    <div style="display: block; margin-top: 10px;">
-        <img src="https://github.com/user-attachments/assets/05698efb-0c1f-4b92-bc8e-8b2a7944a0cd" alt="8e4l_combo_img" width="300" />
-    </div>
-</div>
-
-
-<h3>Binding Site of PIP<sub>2</sub> found in 8E4L</h3>
 <div style="display: flex; justify-content: space-between;">
     <img src="https://github.com/user-attachments/assets/7096d2a3-1e53-4846-b63b-35930661b355" alt="8e4l_ligand_img" width="300" />
     <img src="https://github.com/user-attachments/assets/80a1fb2a-b2b7-4b44-8f66-6cb9f48ce555" alt="8e4l_binding_site_img" width="300" />
