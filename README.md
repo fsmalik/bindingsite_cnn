@@ -1,9 +1,9 @@
 # Binding Site Tensor
-Contains scripts for an working project that converts protein binding sites to tensors for use in 3D CNN.
+Contains scripts for a working project that converts protein binding sites to tensors for use in Machine Learning and Deep Learning, particularly designed for 3D CNN.
 
-The keras code is written in CPU form, but was meant to be converted to GPU since the calculations are intensive. I currently only have MacOS, and this is the reason the project is currently on hold.
+The Keras code is written in CPU form, but was meant to be converted to GPU since the calculations are intensive. I currently only have MacOS, and this is the reason the project is currently on hold.
 
-Certain scripts in the program can be used for however.
+However, certain scripts in the program can still be used for other things.
 
 __Requirements:__
 
@@ -15,7 +15,7 @@ shell:
   * ```curl```
     
 ## Finding Binding Site of PDB(s)
-### 1. Isolating a ligand and it's corresponding binding site of a single protein structure file
+### 1. Isolating a ligand and its corresponding binding site of a single protein structure file
   
 ```markdown
 python3 find_HETATM_1.2.py -i input.pdb -ht HETATM_ID -b binding_site_output.pdb -l ligand_output.pdb [-d distance] [-c]
@@ -49,9 +49,9 @@ Example: include -c to center.
 ```
 * ```find_HETATM_1.2.py``` will find the investigational molecule (i.e. drug or exogenous ligand) in a single PDB file and output both the residues of the protein that make up the binding site and the ligand itself.
   
-* After running the program you will find a file for the binding site and a file for the ligand, both in ```.pdb``` format. The binding site contains the full residues of any residue that is within the given distance of any atom of the ligand. 3.5 Å is the default distance used. 
+* After running the program you will find a file for the binding site and a file for the ligand, both in ```.pdb``` format. The binding site contains the full residues that are within the given distance of any atom of the ligand. 3.5 Å is the default distance used. 
 
-### 2. Isolating a ligand and it's corresponding binding site of a more than one protein structure file
+### 2. Isolating a ligand and its corresponding binding site of a more than one protein structure file
 
 ```markdown
 bash hetatm_batch_script_2.0.sh [options]
@@ -73,7 +73,7 @@ Ensure that you have the required permissions to execute the script. You may nee
 
 * This script will skip any PDB file bound with amino acids (i.e. neurotransmitters) and works only for hetergenous ligands as described above. 
 
-* Useful output information that can potentially be generated in a ```.log``` file by adding ```>``` at the end of the command.
+* Useful output information that is generated can be written to a ```.log``` file by adding ```>``` at the end of the command.
 
 ## Additional Scripts
 
