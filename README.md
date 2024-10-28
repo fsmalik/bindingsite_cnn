@@ -80,9 +80,12 @@ Ensure that you have the required permissions to execute the script. You may nee
 1. ```process_pdb.py``` a function that imports a ```.pdb``` format file into a dataframe using Pandas.
    * In python: ```df = process_pdb('filename')``` - ```df``` would be the DataFrame's name
    * Removes all waters and glucose. Retains only the ```ATOM``` and ```HETATM``` records from the file.
-  
+
+2. If you used the ```hetatm_batch_script_2.0.sh``` script to generate a number of binding site and ligand files you will have multiple files with extension ```_binding_site.pdb``` and ```_ligand.pdb```. These files can be combined again, correspondingly using the ```combine_ligand+bs.sh``` script.
+   * This essentially looks at all the ```.pdb``` files in the current directory and combines ligand and binding site based on the original PDB. For instance, it will take ```7yxr_binding_site.pdb``` and ```7yxr_ligand.pdb``` and combine the two into a single file ```7yxr_combo.pdb```.
+   * If the combined file already exists, it will be deleted before making a new version. So if ```7yxr_combo.pdb``` already exisits in the directory it will be deleted and replaced.
     
-3. ```TEMP_voxelizer+keras.py``` __is INCOMPLETE and has not been tested completely__ - Instead I suggest using [PyUUL](https://pyuul.readthedocs.io) for protein voxelization.
+4. ```TEMP_voxelizer+keras.py``` __is INCOMPLETE and has not been tested completely__ - Instead I suggest using [PyUUL](https://pyuul.readthedocs.io) for protein voxelization.
    * Contains the python class for voxelization functions and reverse functions.
    * Contains scripts for training a 3D CNN on voxel.
    * Hashing protocol is inspired by the [TorchProteinLibray](https://github.com/lamoureux-lab/TorchProteinLibrary). __Note__: the hashing used here is reversed to align more towards drug development utilities.
