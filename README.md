@@ -51,6 +51,17 @@ Example: include -c to center.
   
 * After running the program you will find a file for the binding site and a file for the ligand, both in ```.pdb``` format. The binding site contains the full residues that are within the given distance of any atom of the ligand. 3.5 Å is the default distance used. 
 
+![8e4l_binding_site_img](https://github.com/user-attachments/assets/de743252-4907-4842-81b6-0153a22d0cb1)
+![8e4l_ligand_img](https://github.com/user-attachments/assets/35a88f4a-b73c-4f52-b2a4-debdebd9420a)
+![8e4l_combo_img](https://github.com/user-attachments/assets/3936622a-ef3e-47d1-a1a0-97d89b39b4f0)
+
+<div style="display: flex; justify-content: space-around;">
+    <img src="(https://github.com/user-attachments/assets/de743252-4907-4842-81b6-0153a22d0cb1)" alt="Image 1" width="300" />
+    <img src="(https://github.com/user-attachments/assets/35a88f4a-b73c-4f52-b2a4-debdebd9420a)" alt="Image 2" width="300" />
+    <img src="(https://github.com/user-attachments/assets/3936622a-ef3e-47d1-a1a0-97d89b39b4f0)" alt="Image 3" width="300" />
+</div>
+
+
 ### 2. Isolating a ligand and its corresponding binding site of a more than one protein structure file
 
 ```markdown
