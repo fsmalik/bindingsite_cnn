@@ -34,7 +34,7 @@ def process_pdb(pdbfile):
     pdb['atom_name'] = pdb['record_name'].str.slice(start=11, stop=16).str.strip()
     pdb['residue'] = pdb['record_name'].str.slice(start=16, stop=20).str.strip()
     pdb['chain'] = pdb['record_name'].str.slice(start=20, stop=22).str.strip()
-    pdb['res_seq'] = pdb['record_name'].str.slice(start=22, stop=26).str.strip()
+    pdb['res_seq'] = pdb['record_name'].str.slice(start=22, stop=26).str.strip().astype(int)
     pdb['orth_x'] = pdb['record_name'].str.slice(start=30, stop=38).str.strip().astype(float)
     pdb['orth_y'] = pdb['record_name'].str.slice(start=38, stop=46).str.strip().astype(float)
     pdb['orth_z'] = pdb['record_name'].str.slice(start=46, stop=54).str.strip().astype(float)
