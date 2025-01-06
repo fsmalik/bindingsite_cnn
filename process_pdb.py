@@ -30,7 +30,7 @@ def process_pdb(pdbfile):
     pdb = pdb[pdbmask]
 
     # Extract fields from the 'record_name' column
-    pdb['serial_number'] = pdb['record_name'].str.slice(start=6, stop=11).str.strip()
+    pdb['serial_number'] = pdb['record_name'].str.slice(start=6, stop=11).str.strip().astype(int)
     pdb['atom_name'] = pdb['record_name'].str.slice(start=11, stop=16).str.strip()
     pdb['residue'] = pdb['record_name'].str.slice(start=16, stop=20).str.strip()
     pdb['chain'] = pdb['record_name'].str.slice(start=20, stop=22).str.strip()
