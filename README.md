@@ -1,7 +1,11 @@
 # Binding Site Tensor
+
+Unfortunately the descriptions below are highly temporary since this is a working project. Some of the recently updated scripts may not be be described below.
+
 Contains scripts for a working project that converts protein binding sites to tensors for use in Machine Learning and Deep Learning, particularly designed for 3D CNN.
 
-The Keras code is written in CPU form, but was meant to be converted to GPU since the calculations are intensive. I currently only have MacOS, and this is the reason the project is currently on hold.
+The Keras code is written in CPU form, but was meant to be converted to GPU since the calculations are intensive. 
+The PyTorch scripts are written for CUDA.
 
 However, certain scripts in the program can still be used for other tasks.
 
