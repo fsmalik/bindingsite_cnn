@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
-import math
 import argparse
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--inputpdb", required=True, help='input PDB file in .pdb format')
@@ -125,6 +125,10 @@ for lrow in ligand.itertuples(index=False):
         pointB = (prow.orth_x, prow.orth_y, prow.orth_z)
         if cartesian_distance(*pointA, *pointB) <= distance:
             bs_res_rows.append(pd.Series(prow._asdict()))
+
+if not bs_res_rows:
+    print("No binding site residues found within the specified distance. Exiting program. Try increasing binding site distance.")
+    sys.exit(1) 
 
 bs_atoms = pd.concat(bs_res_rows, axis=1).T
 
