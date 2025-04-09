@@ -37,7 +37,7 @@ if [ "$#" -eq 0 ]; then
                 ;;
         esac
     
-        command="python3 find_HETATM_1.1.py -i $file -ht $ligand -b ${filename_no_extension}_binding_site.pdb -l ${filename_no_extension}_ligand.pdb"
+        command="python3 find_HETATM_1.2.py -i $file -ht $ligand -b ${filename_no_extension}_binding_site.pdb -l ${filename_no_extension}_ligand.pdb"
         echo "batch command: $command"
         eval "$command"
         echo ""
