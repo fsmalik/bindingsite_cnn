@@ -28,6 +28,7 @@ if [ "$#" -eq 0 ]; then
 	# Running python script
     for file in "${files[@]}"; do
         filename_no_extension=$(basename "$file" .pdb)
+	filename_no_extension=${filename_no_extension^^}
         ligand=$(curl -s "https://www.rcsb.org/structure/$filename_no_extension" | sed -n 's/.*Ligand Interaction<\/a>&nbsp;\(([^)]*)\).*/\1/p' | sed 's/(//g; s/)//g')
     
         case $ligand in
