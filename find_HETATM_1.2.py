@@ -95,6 +95,10 @@ ligand = ligand[ligand['res_seq'] == first_unique_res_seq]
 
 primary_chain = ligand_raw["chain"].unique()[0]
 
+# To handle multiple conformations of a protein that are overlapping
+ligand = ligand.drop_duplicates(subset=['atom_name', 'residue', 'chain', 'res_seq'])
+protein = protein.drop_duplicates(subset=['atom_name', 'residue', 'chain', 'res_seq'])
+
 print('** using Chain',primary_chain)
 
 def cartesian_distance(x1, y1, z1, x2, y2, z2):
