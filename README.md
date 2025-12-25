@@ -1,6 +1,6 @@
 # Binding Site Tensor
 
-Unfortunately the descriptions below are highly temporary since this is a working project. Some of the recently updated scripts may not be be described below.
+The descriptions below are highly temporary since this is a working project. Some of the recently updated scripts may not be be described below.
 
 Contains scripts for a working project that converts protein binding sites to tensors for use in Machine Learning and Deep Learning, particularly designed for 3D CNN.
 
